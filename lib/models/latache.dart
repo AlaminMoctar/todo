@@ -7,6 +7,7 @@ class Task {
   DateTime dueDate;
   bool completed;
 
+  // Constructeur de la classe Task
   Task({
     required this.id,
     required this.title,
@@ -17,6 +18,7 @@ class Task {
     this.completed = false,
   });
 
+  // Méthode pour convertir une tâche en une Map (dictionnaire)
   Map<String, dynamic> toMap() {
     return {
       'id': id,
@@ -28,6 +30,7 @@ class Task {
     };
   }
 
+  // Factory constructor pour créer une tâche à partir d'une Map
   factory Task.fromMap(Map<String, dynamic> map) {
     return Task(
         id: map['id'],
